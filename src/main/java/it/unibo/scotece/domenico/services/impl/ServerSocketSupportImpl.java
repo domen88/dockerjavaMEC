@@ -19,7 +19,7 @@ public class ServerSocketSupportImpl implements SocketSupport {
     public void startServer() throws IOException {
         ServerSocket socket = new ServerSocket(9000);
         Socket client = socket.accept();
-        final String backup = System.getProperty("user.home") + "/backup.tar";
+        final String backup = System.getProperty("user.home") + "/backup.tar.gz";
 
         BufferedInputStream in =
                 new BufferedInputStream(client.getInputStream());
@@ -44,7 +44,7 @@ public class ServerSocketSupportImpl implements SocketSupport {
     @Override
     public void startClient(String address) throws Exception {
         Socket socket = new Socket(address, 9000);
-        final String backup = System.getProperty("user.home") + "/backup.tar";
+        final String backup = System.getProperty("user.home") + "/backup.tar.gz";
 
         BufferedInputStream in =
                 new BufferedInputStream(
