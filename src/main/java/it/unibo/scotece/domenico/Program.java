@@ -8,7 +8,7 @@ import java.io.IOException;
 
 import static spark.Spark.*;
 
-public class Programma {
+public class Program {
 
     public static void main(String[] args){
 
